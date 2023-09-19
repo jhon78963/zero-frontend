@@ -1,0 +1,57 @@
+<div class="bg-custom">
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <div id="container">
+      <div class="banner">
+        <img src="../../../assets/img/login.png" alt="imagem-login">
+        <p style="color: #fff; font-weight: 400; text-align: center;">
+          Bienvenido, accede y disfruta de todo el contenido,
+          <br>Somos un equipo de profesionales comprometidos con
+          <br>brindarte la mejor herramienta para tu desarrollo académico.
+        </p>
+      </div>
+
+      <div class="box-login">
+        <h1>
+          ¡Hola!<br>
+          Bienvenido de nuevo.
+        </h1>
+        <div class="box">
+          <h2>Inicia sesión ahora</h2>
+
+          <input type="text" name="email" id="email" placeholder="email" [(ngModel)]="user.email">
+          <div class="row" id="alertEmailError" style="display: none;">
+            <p id="emailError" style="font-weight: 500; color: red; font-size: 0.75rem;"></p>
+          </div>
+
+          <input type="password" name="password" id="password" placeholder="password" required
+            [(ngModel)]="user.password">
+          <div class="row" id="alertPasswordError" style="display: none;">
+            <p id="passwordError" style="font-weight: 500; color: red; font-size: 0.75rem;"></p>
+          </div>
+
+          <div class="row" id="alertCredentialError" style="display: none;">
+            <p id="credentialError" style="font-weight: 500; color: red; font-size: 0.75rem;"></p>
+          </div>
+
+          <a href="#">
+            <p>¿Olvidaste tu contraseña?</p>
+          </a>
+
+          <button type="submit" id="btnLogin">Login</button>
+
+
+          <a href="#">
+            <p>¿No tienes una cuenta? Registrate
+            </p>
+          </a>
+          <div class="social">
+            <img src="../../../assets/img/facebook.png" alt="facebook">
+            <img src="../../../assets/img/google.png" alt="google">
+            <img src="../../../assets/img/twitter.png" alt="twitter">
+            <img src="../../../assets/img/github.png" alt="github">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
