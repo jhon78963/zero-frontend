@@ -14,10 +14,15 @@ const routes: Routes = [
       import('./auth/login/login.module').then((m) => m.LoginPageModule),
   },
   {
-    path: 'home',
+    path: 'private',
     canActivate: [AuthGuard],
     loadChildren: () =>
       import('./home/home.module').then((m) => m.HomePageModule),
+  },
+  {
+    path: '',
+    redirectTo: 'private',
+    pathMatch: 'full',
   },
 ];
 
